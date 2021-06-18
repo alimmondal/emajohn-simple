@@ -6,9 +6,9 @@ const Header = () => {
         <div className="header">
             <img src={header} alt="" />
             <nav>
-                <a href="/Shop">Shop</a>
-                <a href="/Review">Review</a>
-                <a href="/Inventory">Manage Inventory</a>
+                <a href="/shop">Shop</a>
+                <a href="/review"> Order Review</a>
+                <a href="/inventory">Manage Inventory</a>
             </nav>
         </div>
     );
