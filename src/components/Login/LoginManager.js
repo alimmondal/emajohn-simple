@@ -32,25 +32,22 @@ export const handleGoogleSignIn = () => {
 
 
 //Fb Sign In handler 
-export const handleFbSignIn = () => {
-    const fbProvider = new firebase.auth.FacebookAuthProvider();
-    return firebase
-        .auth()
-        .signInWithPopup(fbProvider)
-        .then((result) => {
-            var credential = result.credential;
-            var user = result.user;
-            user.success = true;
-            return user;
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            var email = error.email;
-            var credential = error.credential;
-            console.log(errorCode, errorMessage, email, credential)
-        });
-}
+// export const handleFbSignIn = () => {
+//     const fbProvider = new firebase.auth.FacebookAuthProvider();
+//     return firebase.auth().signInWithPopup(fbProvider).then((result) => {
+//             var credential = result.credential;
+//             var user = result.user;
+//             user.success = true;
+//             return user;
+//         })
+//         .catch((error) => {
+//             var errorCode = error.code;
+//             var errorMessage = error.message;
+//             var email = error.email;
+//             var credential = error.credential;
+//             console.log(errorCode, errorMessage, email, credential)
+//         });
+// }
 
 
 export const handleGoogleSignOut = () => {
