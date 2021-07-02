@@ -22,6 +22,7 @@ export const handleGoogleSignIn = () => {
                 photo: photoURL,
                 success: true,
             }
+            setUserToken();
             return signedInUser;
         })
         .catch(err => {
@@ -30,24 +31,31 @@ export const handleGoogleSignIn = () => {
         })
 }
 
+const setUserToken = () => {
+    firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+        sessionStorage.setItem('token', idToken);
+      }).catch(function(error) {
+        // Handle error
+      });
+}
 
-//Fb Sign In handler 
-// export const handleFbSignIn = () => {
-//     const fbProvider = new firebase.auth.FacebookAuthProvider();
-//     return firebase.auth().signInWithPopup(fbProvider).then((result) => {
-//             var credential = result.credential;
-//             var user = result.user;
-//             user.success = true;
-//             return user;
-//         })
-//         .catch((error) => {
-//             var errorCode = error.code;
-//             var errorMessage = error.message;
-//             var email = error.email;
-//             var credential = error.credential;
-//             console.log(errorCode, errorMessage, email, credential)
-//         });
-// }
+// Fb Sign In handler 
+export const handleFbSignIn = () => {
+    const fbProvider = new firebase.auth.FacebookAuthProvider();
+    return firebase.auth().signInWithPopup(fbProvider).then((result) => {
+            var credential = result.credential;
+            var user = result.user;
+            user.success = true;
+            return user;
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            var email = error.email;
+            var credential = error.credential;
+            console.log(errorCode, errorMessage, email, credential)
+        });
+}
 
 
 export const handleGoogleSignOut = () => {

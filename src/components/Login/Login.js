@@ -37,33 +37,33 @@ const Login = () => {
   }
 
   //Fb Sign In handler 
-  const handleFbSignIn = () => {
-    const fbProvider = new firebase.auth.FacebookAuthProvider();
-    firebase
-        .auth()
-        .signInWithPopup(fbProvider)
-        .then((result) => {
-            var credential = result.credential;
-            var user = result.user;
-            var accessToken = credential.accessToken;
-            console.log(user)
-            history.replace(from);
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            var email = error.email;
-            var credential = error.credential;
-        });
-}
+//   const handleFbSignIn = () => {
+//     const fbProvider = new firebase.auth.FacebookAuthProvider();
+//     firebase
+//         .auth()
+//         .signInWithPopup(fbProvider)
+//         .then((result) => {
+//             var credential = result.credential;
+//             var user = result.user;
+//             var accessToken = credential.accessToken;
+//             console.log(user)
+//             history.replace(from);
+//         })
+//         .catch((error) => {
+//             var errorCode = error.code;
+//             var errorMessage = error.message;
+//             var email = error.email;
+//             var credential = error.credential;
+//         });
+// }
 
 
-  // const fbSignIn = () => {
-  //   handleFbSignIn()
-  //     .then((res) => {
-  //       handleResponse(res, true);
-  //     })
-  // }
+  const fbSignIn = () => {
+    handleFbSignIn()
+      .then((res) => {
+        handleResponse(res, true);
+      })
+  }
 
   const googleSignOut = () => {
     handleGoogleSignOut()

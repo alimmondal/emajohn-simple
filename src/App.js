@@ -16,7 +16,7 @@ import ProductDetail from './components/ProductDetail/ProductDetail';
 import Login from './components/Login/Login';
 import Shipment from './components/Shipment/Shipment';
 import { createContext, useState } from 'react';
-import PrivateRoute from './PrivateRoute/PrivateRoute';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 export const UserContext = createContext();
