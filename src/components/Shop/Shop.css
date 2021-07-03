@@ -17,7 +17,6 @@
 
 .cart-container {
     position     : fixed;
-    /* z-index   : 10010; */
     right        : 220px;
     top          : 200px;
     bottom       : auto;
@@ -38,7 +37,7 @@
     }
 
     .search-input {
-        width: 70%;
+        width: 60%;
     }
 
 }
