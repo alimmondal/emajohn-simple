@@ -56,9 +56,10 @@ const Shop = () => {
     }
 
     return (
-        <div className="twin-container">
+        <div className=" ">
+            <div className="twin-container">
             <div className="product-container">
-                <input type="text" onBlur={handleSearch} placeholder="search product"/>
+                <input className="search-input" type="text" onBlur={handleSearch} placeholder="search product"/>
                 {
                     products.map(pd => <Product 
                         key={pd.key}
@@ -76,6 +77,7 @@ const Shop = () => {
                </Cart>
             </div>
             
+        </div>
         </div>
     );
 };

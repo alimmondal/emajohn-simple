@@ -43,8 +43,8 @@ const CheckoutForm = ({handlePayment}) => {
     <div>
       <form onSubmit={handleSubmit}>
         <CardElement />
-        <button type="submit" disabled={!stripe}>
-          Pay
+        <button className="main-button mt-3 bg-warning" type="submit" disabled={!stripe}>
+          Pay wit Stripe
         </button>
       </form>
       {

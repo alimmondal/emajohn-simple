@@ -4,6 +4,7 @@ import './Shipment.css';
 import { UserContext } from '../../App';
 import { getDatabaseCart, processOrder } from '../../utilities/databaseManager';
 import ProcessPayment from '../ProcessPayment/ProcessPayment';
+import PaymentImg from '../../images/giphy.gif'
 
 const Shipment = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -42,7 +43,8 @@ const Shipment = () => {
   console.log(watch("example")); // watch input value by passing the name of it
 
   return (
-    <div className="container">
+    <div className="container d-flex justify-content-center">
+      
       <div className="row">
         <div style={{display: shippingData ? 'none' : 'block'}} className="col-md-6">
           <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
@@ -58,11 +60,14 @@ const Shipment = () => {
 
             <input {...register("address", { required: true })} placeholder="Your address" />
             {errors.address && <span className="error">Address is required</span>}
-            <input type="submit" />
+            <input className="main-button" type="submit" />
           </form>
         </div>
-        <div style={{display: shippingData ? 'block' : 'none'}} className="col-md-6">
-          <h1>Please Pay with Stripe</h1>
+        <div className="col-md-6">
+          <img style={{height:'300px', padding: '50px'}} src={PaymentImg} alt="" />
+      </div>
+        <div style={{display: shippingData ? 'block' : 'none'}} className="col-md-6 mt-5">
+          <h1>Please, Pay with Stripe</h1>
           <ProcessPayment handlePayment={handlePaymentSuccess}></ProcessPayment>
         </div>
       </div>

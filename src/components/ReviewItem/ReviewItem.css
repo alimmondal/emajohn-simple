@@ -1,0 +1,30 @@
+.review-item {
+    width         : 50%;
+    border-bottom : 1px solid lightgray;
+    margin-bottom : 5px;
+    padding-bottom: 5px;
+    margin-left   : 200px;
+    margin-top: 10px;
+}
+
+@media(max-width:760px) {
+    .review-item {
+        width         : 55%;
+        margin-left : 0;
+        flex-direction: column;
+        align-items   : center;
+        text-align    : center;
+    }
+
+    /* .product img{
+        width: 150px;
+    } */
+    .main-button {
+        width: 8rem;
+    }
+
+    .review-item name {
+        color    : blue;
+        font-size: 14px;
+    }
+}

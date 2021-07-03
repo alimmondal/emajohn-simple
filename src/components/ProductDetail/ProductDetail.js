@@ -20,7 +20,7 @@ const ProductDetail = () => {
     
     return (
         <div>
-            <h1>Your Product Details.</h1>
+            <h1>Product Details.</h1>
             {
                 loading ? <p>loading...</p>:
                 <Product showAddToCart={false} product={product}></Product>

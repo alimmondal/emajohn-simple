@@ -41,8 +41,8 @@ const Review = () => {
     //     thankyou = <img src={happyImage} alt=""/>
     // } 
     return (
-        <div className="twin-container">
-            <div className="product-container">
+        <div className=" twin-container">
+            <div className="">
                 {
                     cart.map(pd => <ReviewItem 
                         key={pd.key}
