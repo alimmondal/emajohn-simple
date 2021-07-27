@@ -17,7 +17,7 @@
 
 .cart-container {
     position     : fixed;
-    right        : 220px;
+    right        : 150px;
     top          : 200px;
     bottom       : auto;
     margin-top   : 0px;
@@ -25,7 +25,7 @@
     border-left  : 1px solid lightgrey;
 }
 
-@media (max-width:760px) {
+@media (max-width:1260px) {
     .cart-container {
         width     : 8rem;
         text-align: center;
@@ -41,3 +41,16 @@
     }
 
 }
+
+/* @media (min-width:768px) {
+    .cart-container {
+        width     : 8rem;
+        text-align: center;
+        position  : fixed;
+        left      : 420px;
+        top       : 215px;
+        bottom    : auto;
+        margin-top: 0px;
+    
+    }
+} */
