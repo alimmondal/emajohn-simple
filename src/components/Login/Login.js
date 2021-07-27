@@ -128,7 +128,7 @@ const Login = () => {
           <button onClick={googleSignIn}>Sign In With Google</button>
       }
       <br />
-      <button onClick={handleFbSignIn}>Sign In Using Facebook</button>
+      <button onClick={fbSignIn}>Sign In Using Facebook</button>
 
       {
         user.isSignedIn && <div>
