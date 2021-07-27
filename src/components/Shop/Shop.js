@@ -61,6 +61,9 @@ const Shop = () => {
             <div className="product-container">
                 <input className="search-input" type="text" onBlur={handleSearch} placeholder="search product"/>
                 {
+                    products.length === 0 && <p>loading.....</p> 
+                }
+                {
                     products.map(pd => <Product 
                         key={pd.key}
                         showAddToCart={true}
